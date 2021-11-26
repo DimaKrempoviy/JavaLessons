@@ -1,19 +1,28 @@
 public class Lesson20 {
     public static void main(String[] args) {
-        Man.description = "Nise";
+        Man h1 = new Man("Bob",40);
+        Man h2 = new Man("Tom",30);
+        h1.printNumberOfPeople();
+        h2.printNumberOfPeople();
+        Man h3 = new Man("Rod", 50);
+        h1.printNumberOfPeople();
+        h2.printNumberOfPeople();
+        h3.printNumberOfPeople();
+
     }
 }
 class Man {
 
     private String name;
     private  int age;
-    public static String description;
+    public static int countPeople;
+
 
 
     public Man(String name, int age){
-        System.out.println("Привет из третьего конструктора!");
         this.name = name;
         this.age = age;
+        countPeople++;
     }
 
 
@@ -23,6 +32,10 @@ class Man {
 
     public void setAge (int age){
         this.age = age;
+    }
+
+    public void  printNumberOfPeople(){
+        System.out.println("Number Of People is " + countPeople);
     }
 
 }
