@@ -5,7 +5,7 @@ public class Lessons22 {
 ;    }
 }
 
-class Test {
+class Test1 {
     public static final int CONSTANT = 0;
 
 }
